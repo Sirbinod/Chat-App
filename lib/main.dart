@@ -1,3 +1,5 @@
+import 'package:chat_app/Screens/login.dart';
+import 'package:chat_app/Screens/register.dart';
 import 'package:chat_app/Screens/welcome.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +13,8 @@ class ChatApp extends StatelessWidget {
       initialRoute: Welcome.id,
       routes: {
         Welcome.id: (context) => Welcome(),
+        Login.id:(context) => Login(),
+        Register.id:(context) => Register(),
       },
     );
   }

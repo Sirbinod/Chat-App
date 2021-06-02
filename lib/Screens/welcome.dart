@@ -1,4 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:chat_app/Screens/login.dart';
+import 'package:chat_app/Screens/register.dart';
 import 'package:chat_app/widget/round_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -54,8 +56,12 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin{
               ],
             ),
             SizedBox(height: 48.0,),
-            RoundButton(color: Colors.lightBlueAccent, title:'Log In',onPresses: (){}),
-            RoundButton(color: Colors.blueAccent, title:'Register',onPresses: (){})
+            RoundButton(color: Colors.lightBlueAccent, title:'Log In',onPresses: (){
+              Navigator.pushNamed(context, Login.id);
+            }),
+            RoundButton(color: Colors.blueAccent, title:'Register',onPresses: (){
+              Navigator.pushNamed(context, Register.id);
+            })
           ],
         ),
       ),
